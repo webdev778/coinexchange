@@ -1,0 +1,1 @@
+mysql -u root peatio_development < peatio.dmp 
