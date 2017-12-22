@@ -3,5 +3,5 @@ pusher = new Pusher gon.pusher.key,
   wsHost: gon.pusher.wsHost
   wsPort: gon.pusher.wsPort
   wssPort: gon.pusher.wssPort
-
+  cluster: 'ap1'
 window.pusher = pusher

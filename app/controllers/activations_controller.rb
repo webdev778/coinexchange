@@ -7,6 +7,7 @@ class ActivationsController < ApplicationController
 
   def new
     current_user.send_activation
+    puts "current-user-activation"
     redirect_to settings_path
   end
 

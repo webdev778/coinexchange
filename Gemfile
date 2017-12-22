@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0.12'
 gem 'rails-i18n'
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 gem 'daemons-rails'
 gem 'redis-rails'
 
@@ -37,7 +37,7 @@ gem 'rails-observers'
 gem 'country_select', '~> 2.1.0'
 
 gem 'gon', '~> 5.2.0'
-gem 'pusher'
+gem 'pusher', '~> 1.3.0'
 gem 'eventmachine', '~> 1.0.4'
 gem 'em-websocket', '~> 0.5.1'
 
@@ -69,6 +69,7 @@ gem 'unread', github: 'peatio/unread'
 gem 'carrierwave', '~> 0.10.0'
 gem 'simple_captcha2', require: 'simple_captcha'
 gem 'rest-client', '~> 1.6.8'
+gem 'concurrent-ruby'
 
 group :development, :test do
   gem 'factory_girl_rails'

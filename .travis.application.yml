@@ -3,7 +3,7 @@ defaults: &defaults
   # sites hosts
   # session expire seconds
   # admin role account
-  URL_HOST: peatio.dev
+  URL_HOST: localhost
   URL_SCHEMA: http
   DEFAULT_MARKET: btccny
   SESSION_EXPIRE: 120
