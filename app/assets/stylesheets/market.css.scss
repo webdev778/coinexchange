@@ -7,7 +7,8 @@
 @import 'bootstrap-switch.min';
 
 @import 'vars/basic';
-@import 'vars/market';
+// @import 'vars/market';
+@import 'vars/market_light';
 @import 'vars/custom';
 
 @import "font-awesome-sprockets";
@@ -463,13 +464,16 @@ header {
 
 /* layout position
 ----------------------------------------------- */
-#ask_entry, #bid_entry { width: $entry-width; height: $entry-height; }
-.entry-right { bottom: $gutter; right: $gutter + $entry-width + $gutter; }
-.entry-left { bottom: $gutter; right: $gutter; }
+#ask_entry, #bid_entry { 
+  min-width: $new-entry-width; min-height: $new-entry-height; 
+  width: $new-entry-width; height: $new-entry-height;
+}
+.entry-right { bottom: $gutter; left: $gutter + $market-trades-width + $gutter; }
+.entry-left { bottom: $gutter; right: $gutter + $my-orders-width + $gutter; }
 
 #ticker {
   width: $ticker-width; height: $ticker-height;
-  bottom: $gutter_4x + $entry-height + $my-orders-height + $depths-height; right: $gutter;
+  bottom: $gutter_4x + $my-orders-height + $depths-height; right: $gutter;
 
   .ask, .last, .bid {
     text-align: center;
@@ -532,7 +536,7 @@ header {
 
 #depths_wrapper {
   width: $order-book-width; height: $depths-height;
-  bottom: $gutter-3x + $my-orders-height + $entry-height; right: $gutter;
+  bottom: $gutter-3x + $my-orders-height; right: $gutter;
 
   .panel-body {
     padding: 0;
@@ -626,13 +630,13 @@ header {
   .dropdown-wrapper {
     position: absolute;
     height: $my-orders-height;
-    bottom: $gutter-2x + $entry-height; right: $order-book-width + $gutter;
+    bottom: $gutter-2x; right: $order-book-width + $gutter;
   }
 }
 
 #my_orders {
   width: $my-orders-width; height: $my-orders-height;
-  bottom: $gutter-2x + $entry-height; right: $gutter;
+  bottom: $gutter-2x; right: $gutter;
 
   .panel-body-content {
     height: $my-orders-height - $gutter-2x;
