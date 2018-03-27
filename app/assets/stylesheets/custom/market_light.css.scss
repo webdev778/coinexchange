@@ -1,0 +1,178 @@
+.panel {
+  background-color : #fff;
+  border: 1px solid #e6e6e6;
+  .panel-body-head{
+    border-bottom: none;
+    background: #f4f4f4;
+    table thead th{
+      color: #000;
+    }
+  }
+}
+
+#ticker, #order_book, #market_trades, #my_orders, #market_list {
+  table {
+    tr.highlight {
+      background-color: #fdf1d6;
+    }
+  }
+}
+
+.btn-danger{
+  color: #666;
+  background-color: #f3f3f3;
+  border-color: #e4e4e4;
+}
+
+
+#ask_entry, #bid_entry {
+  z-index: 999;
+
+  .input-group {
+   
+    label.input-group-addon {
+      padding: 3px 6px 0px 6px;
+      min-width: 70px;
+      text-align: right;
+      color: #666;
+    }
+
+    span.input-group-addon {
+      padding: 3px 6px 0px 6px;
+      min-width: 40px;
+      text-align: left;
+      color: #666;
+    }
+
+    input {
+      text-align: right;
+      padding-top: 8px !important;
+      padding-bottom: 4px !important;
+      padding-right: 6px !important;
+      padding-left: 24px !important;
+    }
+
+  }
+
+  .hint-price-disadvantage, .hint-positions  {
+    top: 3px;
+    left: 60px;
+    margin-left: 0px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .label { font-size: inherit; }
+  .label.label-info { color: $brand-info }
+  .label.label-success { color: $brand-success }
+  .label.label-danger { color: $brand-danger }
+
+  span.status-info, .status-success, .status-danger {
+    top: -3px;
+    left: -6px;
+    margin-left: 0px;
+    position: absolute;
+    i.fa { margin-left: 4px; }
+  }
+
+  .row-tips {
+    margin-top: 18px;
+    margin-bottom: 13px;
+
+    .current-balance { font-family: $font-family-monospace; }
+    .unit { padding-left: 3px; }
+  }
+}
+
+.input-group-addon {
+  border:none;
+  background-color: #f3f3f3;
+}
+
+.form-control {
+  background-color: #f3f3f3;
+  background-image: none;
+  border: 1px solid #d4d4d4;
+}
+
+.content{
+  background: #fff;
+}
+
+#my_orders{
+  z-index: 998;
+}
+
+#ask_entry, #bid_entry {
+  z-index: 998;
+}
+
+#my_orders_wrapper .dropdown-wrapper{
+  z-index:999;
+}
+
+#order_book{
+  z-index: 1000;
+}
+
+* {
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+}
+
+header{
+  .navbar {
+    height: 60px;
+  }
+  
+  a.navbar-brand{
+      font-size: 30pt;
+      color: #000;
+      span{
+        color: black;
+        font-weight: bold;
+      }
+  }
+  
+  div.market_name {
+    float: left; 
+    margin-right: 35px;
+    color: grey;
+    span{
+        font-size:24px;
+        font-weight: bold;
+    }
+    a {
+      font-size: 16px;
+      font-weight: bold;
+      color: grey !important;
+      text-decoration: none;
+    }
+  }
+  
+  .nav {
+    li {
+      margin-right:15px;
+      line-height:1.2;
+      text-align:center;
+      h4{
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .navbar-right li a{
+    padding-left:0px;
+    padding-right:0px;
+  }
+  
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: black !important;
+}
+
+#account_summary > a{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

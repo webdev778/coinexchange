@@ -1,0 +1,44 @@
+header.navbar.navbar-default.navbar-static-top role = "navigation"
+  .container-fluid
+    a.navbar-brand href=root_path
+      span
+        | BitSuq
+      |   
+    .market_name
+      span = @market.name
+      p
+        a href=root_path
+          |   Bitcoin
+
+    ul#menu.nav.navbar-nav.navbar-left
+      li
+        h4
+          |  Last Price 
+        p.last
+          | 8,345.5000
+      li
+        h4
+          | #{t('.change')}
+        p
+          span.change
+      li
+        h4
+          |  #{t('.high')}  / #{t('.low')} 
+        p
+          span.high 
+          |  / 
+          span.low
+      li
+        h4
+          |  24h value USD 
+        p
+          span.vol
+
+    ul.nav.navbar-nav.navbar-right
+      - if current_user
+        = render partial: 'account_summary'
+        = render partial: 'settings'
+      - else
+        p.navbar-text
+          == t('private.markets.mask.warning')
+      = render partial: 'language'
