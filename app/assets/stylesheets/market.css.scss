@@ -468,12 +468,13 @@ header {
   min-width: $new-entry-width; min-height: $new-entry-height; 
   width: $new-entry-width; height: $new-entry-height;
 }
-.entry-right { bottom: $gutter; left: $gutter + $market-trades-width + $gutter; }
-.entry-left { bottom: $gutter; right: $gutter + $my-orders-width + $gutter; }
+.entry-right { bottom: $gutter; left: $gutter + $order-book-width + $gutter; }
+.entry-left { bottom: $gutter; right: $gutter + $market-trades-width + $gutter; }
 
 #ticker {
+  min-width: $ticker-width;
   width: $ticker-width; height: $ticker-height;
-  bottom: $gutter_4x + $my-orders-height + $depths-height; right: $gutter;
+  bottom: $gutter-2x + $entry-height; left: $gutter + $order-book-width + $gutter;
 
   .ask, .last, .bid {
     text-align: center;
@@ -491,7 +492,7 @@ header {
 #order_book {
   width: $order-book-width; height: $order-book-height;
   min-height: $order-book-height;
-  top: $gutter; right: $gutter;
+  top: $gutter; left: $gutter;
 
   .panel-body-content {
     min-height: $order-book-height - $panel_table_header_high;
@@ -514,7 +515,7 @@ header {
   position: absolute;
   min-width: $candlestick-width; width: $candlestick-width;
   min-height: $candlestick-height; height: $candlestick-height;
-  top: $gutter; left: $market-list-width + $gutter-2x;
+  top: $gutter; left: $order-book-width + $gutter-2x;
 }
 
 .switch {
@@ -553,14 +554,14 @@ header {
   .dropdown-wrapper {
     position: absolute;
     height: 100px;
-    top: $market-list-height + $gutter-3x; left: $market-trades-width + $gutter;
-    z-index: 998;
+    top: $market-list-height + $gutter-3x; right: $market-trades-width + $gutter;
+    z-index: 999;
   }
 }
 
 #market_trades {
   position: absolute;
-  bottom: $gutter; left: $gutter;
+  bottom: $gutter; right: $gutter;
   width: $market-trades-width;
   height: $market-trades-height;
   min-height: $market-trades-height;
@@ -595,14 +596,14 @@ header {
     position: absolute;
     width: 200px;
     height: 100px;
-    top: $gutter; left: $market-list-width + $gutter;
+    top: $gutter; right: $market-list-width + $gutter;
     z-index: 998;
   }
 }
 
 #market_list {
   position: absolute;
-  top: $gutter; left: $gutter;
+  top: $gutter; right: $gutter;
   width: $market-list-width; height: $market-list-height;
   z-index: 999;
 
@@ -630,13 +631,14 @@ header {
   .dropdown-wrapper {
     position: absolute;
     height: $my-orders-height;
-    bottom: $gutter-2x; right: $order-book-width + $gutter;
+    bottom: $gutter-3x + $entry-height + $ticker-height; left: $order-book-width + $gutter;
   }
 }
 
 #my_orders {
+  min-width: $my-orders-width; 
   width: $my-orders-width; height: $my-orders-height;
-  bottom: $gutter-2x; right: $gutter;
+  bottom: $gutter-3x + $entry-height + $ticker-height; left: $order-book-width + $gutter-2x;
 
   .panel-body-content {
     height: $my-orders-height - $gutter-2x;

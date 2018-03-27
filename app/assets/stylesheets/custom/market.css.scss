@@ -104,7 +104,7 @@ a{
 }
 
 #my_orders{
-  z-index: 1000;
+  z-index: 998;
 }
 
 #ask_entry, #bid_entry {
@@ -113,4 +113,8 @@ a{
 
 #my_orders_wrapper .dropdown-wrapper{
   z-index:999;
+}
+
+#order_book{
+  z-index: 1000;
 }

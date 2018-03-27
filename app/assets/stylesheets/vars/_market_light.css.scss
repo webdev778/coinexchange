@@ -16,26 +16,26 @@ $gutter-6x: $gutter * 6;
 $entry-width: 242px;
 $entry-height: 196px;
 
-$ticker-width: $entry-width * 2 + $gutter;
-$ticker-height: 55px;
-
-$depths-width: $entry-width * 2 + $gutter;
-$depths-height: 102px;
-
-$my-orders-width: $depths-width;
-$my-orders-height: 92px;
-
-$order-book-width: $depths-width;
-$order-book-height: $min-height - $navbar-height - $ticker-height - $depths-height - $my-orders-height - $gutter-6x;
+$order-book-width: $entry-width * 2;
+$order-book-height: $min-height - $navbar-height - $gutter;
 
 $market-list-width: 280px;
-$market-list-height: $entry-height;
+$market-list-height: $entry-height * 2;
 
 $market-trades-width: $market-list-width;
 $market-trades-height: $min-height - $navbar-height - $market-list-height - $gutter-3x;
 
-$new-entry-width: ($min-width - $order-book-width - $market-list-width - $gutter-4x - 20) / 2;
+$new-entry-width: ($min-width - $order-book-width - $market-list-width - $gutter-4x) / 2;
 $new-entry-height: $entry-height;
 
-$candlestick-width: $new-entry-width * 2;
-$candlestick-height: $min-height - $navbar-height - $new-entry-height - $gutter-2x  ;
+$ticker-width: $new-entry-width * 2;
+$ticker-height: 55px;
+
+$depths-width: $new-entry-width * 2;
+$depths-height: 0px;
+
+$my-orders-width: $new-entry-width * 2;
+$my-orders-height: 92px;
+
+$candlestick-width: $new-entry-width * 2 - 20;
+$candlestick-height: $min-height - $navbar-height - $new-entry-height - $ticker-height - $my-orders-height - $depths-height - $gutter-6x  ;

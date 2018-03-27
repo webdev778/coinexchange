@@ -29,9 +29,9 @@ BORDER_WIDTH = 1
       window_h = $(@).height()
       $('.content').height(window_h - navbar_h)
 
-      $('#candlestick').height(window_h - navbar_h - entry_h - gutter_3x)
+      $('#candlestick').height(window_h - navbar_h - entry_h - my_orders_h - ticker_h - gutter_6x)
 
-      order_h = window_h - navbar_h - depths_h - my_orders_h - ticker_h - gutter_6x - 2*BORDER_WIDTH
+      order_h = window_h - navbar_h - gutter
       $('#order_book').height(order_h)
       $('#order_book .panel-body-content').height(order_h - panel_table_header_high - 2*PANEL_PADDING)
 
@@ -45,6 +45,8 @@ BORDER_WIDTH = 1
       markets_w    = $('#market_list').width()
       order_book_w = $('#order_book').width()
       $('#candlestick').width(window_w - order_book_w - markets_w - gutter_4x - 20)
-      $('#ask_entry, #bid_entry').width((window_w - order_book_w - markets_w - gutter_4x - 20 - gutter) / 2)
+      $('#ticker').width(window_w - order_book_w - markets_w - gutter_4x - BORDER_WIDTH*2)
+      $('#my_orders').width(window_w - order_book_w - markets_w - gutter_4x - BORDER_WIDTH*2)
+      $('#ask_entry, #bid_entry').width((window_w - order_book_w - markets_w - gutter_4x - gutter - BORDER_WIDTH*2) / 2)
 
     @$node.resize()
